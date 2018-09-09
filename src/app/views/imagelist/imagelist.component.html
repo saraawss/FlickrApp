@@ -43,10 +43,12 @@
 	        <div class="col">
             	<input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search tags" #tagVal>
             </div>
-            <div>&nbsp;</div>
+            <div class="padding-space"></div>
             <div class="col-auto">
             	<button class="btn btn-lg btn-primary" type="button" (click)="loadImagesByTag(tagVal.value)">Search</button>
             </div>
+            <div class="padding-space2"></div>
+            <div  *ngIf="processIcon" class="loader"></div>
          </div>
           
        </div>

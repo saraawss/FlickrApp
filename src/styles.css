@@ -60,3 +60,33 @@
     	height:20px;
 		overflow: hidden;
 	}
+	
+	.loader {
+	 	border: 5px solid #f3f3f3;
+	    border-radius: 50%;
+	    border-top: 5px solid #007bff;
+	    width: 30px;
+	    height: 30px;
+	    -webkit-animation: spin 2s linear infinite;
+	    animation: spin 2s linear infinite;
+	}
+	
+	/* Safari */
+	@-webkit-keyframes spin {
+	  0% { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(360deg); }
+	}
+	
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+	
+	.padding-space {
+		padding-left: 0.5rem;
+	}
+	
+	.padding-space2 {
+		padding-left: 1rem;
+	}
+

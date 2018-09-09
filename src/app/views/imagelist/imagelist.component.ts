@@ -14,6 +14,7 @@ import {Image} from "../../models/image.model";
 export class ImageListComponent implements OnInit {
     		
 	imagesList : Image[];
+    processIcon : any;
 
     constructor(private http: HttpClient , private router: Router 
             , public imageService: ImageService
@@ -35,14 +36,19 @@ export class ImageListComponent implements OnInit {
 	loadImagesByTag(tag){
 	    console.log('tag>> '+tag);
 	    this.clearImages();
-	    
+	    this.processIcon = true;
 	    this.imageService.getImageListByTag( tag ).subscribe(data => {
             this.imagesList =  data;
+            
+            if(this.imagesList.length){
+                this.processIcon = false; 
+            }
         });
     }
 	
 	clearImages(){
 	   this.imagesList =  [];
+	   this.processIcon = false;
     }
 	
 }
