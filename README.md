@@ -20,5 +20,11 @@ npm install
 npm start
 ```
 
+* You can run the test cases using
+
+```
+npm test
+```
+
 * You can access the App using
 ` http://localhost:3000/
